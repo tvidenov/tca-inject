@@ -8,18 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		01F9A81F2B6946E900106BF7 /* TCA_InjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9A81E2B6946E900106BF7 /* TCA_InjectApp.swift */; };
-		01F9A8212B6946E900106BF7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9A8202B6946E900106BF7 /* ContentView.swift */; };
 		01F9A8232B6946EA00106BF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01F9A8222B6946EA00106BF7 /* Assets.xcassets */; };
 		01F9A8272B6946EA00106BF7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01F9A8262B6946EA00106BF7 /* Preview Assets.xcassets */; };
+		01F9A8302B694BFD00106BF7 /* AppFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 01F9A82F2B694BFD00106BF7 /* AppFeature */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		01F9A81B2B6946E900106BF7 /* TCA+Inject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TCA+Inject.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01F9A81E2B6946E900106BF7 /* TCA_InjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCA_InjectApp.swift; sourceTree = "<group>"; };
-		01F9A8202B6946E900106BF7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		01F9A8222B6946EA00106BF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01F9A8242B6946EA00106BF7 /* TCA_Inject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TCA_Inject.entitlements; sourceTree = "<group>"; };
 		01F9A8262B6946EA00106BF7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		01F9A82D2B6948C100106BF7 /* MyLibrary */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MyLibrary; path = ../../MyLibrary; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01F9A8302B694BFD00106BF7 /* AppFeature in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +39,7 @@
 			children = (
 				01F9A81D2B6946E900106BF7 /* TCA+Inject */,
 				01F9A81C2B6946E900106BF7 /* Products */,
+				01F9A82E2B694BFD00106BF7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,8 +54,8 @@
 		01F9A81D2B6946E900106BF7 /* TCA+Inject */ = {
 			isa = PBXGroup;
 			children = (
+				01F9A82D2B6948C100106BF7 /* MyLibrary */,
 				01F9A81E2B6946E900106BF7 /* TCA_InjectApp.swift */,
-				01F9A8202B6946E900106BF7 /* ContentView.swift */,
 				01F9A8222B6946EA00106BF7 /* Assets.xcassets */,
 				01F9A8242B6946EA00106BF7 /* TCA_Inject.entitlements */,
 				01F9A8252B6946EA00106BF7 /* Preview Content */,
@@ -67,6 +69,13 @@
 				01F9A8262B6946EA00106BF7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		01F9A82E2B694BFD00106BF7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +94,9 @@
 			dependencies = (
 			);
 			name = "TCA+Inject";
+			packageProductDependencies = (
+				01F9A82F2B694BFD00106BF7 /* AppFeature */,
+			);
 			productName = "TCA+Inject";
 			productReference = 01F9A81B2B6946E900106BF7 /* TCA+Inject.app */;
 			productType = "com.apple.product-type.application";
@@ -139,7 +151,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01F9A8212B6946E900106BF7 /* ContentView.swift in Sources */,
 				01F9A81F2B6946E900106BF7 /* TCA_InjectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,13 +298,18 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-Xlinker",
+					"-interposable",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tihomirvidenov.TCA-Inject";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -326,10 +342,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tihomirvidenov.TCA-Inject";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -355,6 +372,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		01F9A82F2B694BFD00106BF7 /* AppFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppFeature;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 01F9A8132B6946E900106BF7 /* Project object */;
 }

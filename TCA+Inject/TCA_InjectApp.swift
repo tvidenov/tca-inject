@@ -1,17 +1,17 @@
-//
-//  TCA_InjectApp.swift
-//  TCA+Inject
-//
-//  Created by Tihomir Videnov on 30.01.24.
-//
-
+import AppFeature
 import SwiftUI
+import Inject
 
 @main
 struct TCA_InjectApp: App {
+  @ObserveInjection var inject
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+          AppView(store: .init(initialState: .init(), reducer: {
+            AppReducer()
+          }))
+          .enableInjection()
         }
     }
 }
