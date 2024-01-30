@@ -19,7 +19,7 @@
 		01F9A8222B6946EA00106BF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01F9A8242B6946EA00106BF7 /* TCA_Inject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TCA_Inject.entitlements; sourceTree = "<group>"; };
 		01F9A8262B6946EA00106BF7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		01F9A82D2B6948C100106BF7 /* MyLibrary */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = MyLibrary; path = ../../MyLibrary; sourceTree = "<group>"; };
+		01F9A8332B69866300106BF7 /* MyLibrary */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MyLibrary; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +37,7 @@
 		01F9A8122B6946E900106BF7 = {
 			isa = PBXGroup;
 			children = (
+				01F9A8332B69866300106BF7 /* MyLibrary */,
 				01F9A81D2B6946E900106BF7 /* TCA+Inject */,
 				01F9A81C2B6946E900106BF7 /* Products */,
 				01F9A82E2B694BFD00106BF7 /* Frameworks */,
@@ -54,7 +55,6 @@
 		01F9A81D2B6946E900106BF7 /* TCA+Inject */ = {
 			isa = PBXGroup;
 			children = (
-				01F9A82D2B6948C100106BF7 /* MyLibrary */,
 				01F9A81E2B6946E900106BF7 /* TCA_InjectApp.swift */,
 				01F9A8222B6946EA00106BF7 /* Assets.xcassets */,
 				01F9A8242B6946EA00106BF7 /* TCA_Inject.entitlements */,
