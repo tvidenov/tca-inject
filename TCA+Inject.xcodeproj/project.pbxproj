@@ -7,19 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01CD86522B69954100513266 /* AppFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 01CD86512B69954100513266 /* AppFeature */; };
 		01F9A81F2B6946E900106BF7 /* TCA_InjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9A81E2B6946E900106BF7 /* TCA_InjectApp.swift */; };
 		01F9A8232B6946EA00106BF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01F9A8222B6946EA00106BF7 /* Assets.xcassets */; };
 		01F9A8272B6946EA00106BF7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01F9A8262B6946EA00106BF7 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01CD86502B69948400513266 /* tca-inject */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "tca-inject"; sourceTree = "<group>"; };
 		01F9A81B2B6946E900106BF7 /* TCA+Inject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TCA+Inject.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01F9A81E2B6946E900106BF7 /* TCA_InjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCA_InjectApp.swift; sourceTree = "<group>"; };
 		01F9A8222B6946EA00106BF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01F9A8242B6946EA00106BF7 /* TCA_Inject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TCA_Inject.entitlements; sourceTree = "<group>"; };
 		01F9A8262B6946EA00106BF7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		01F9A83E2B698FD700106BF7 /* Sources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sources; sourceTree = "<group>"; };
-		01F9A83F2B69901A00106BF7 /* tca-inject */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "tca-inject"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01CD86522B69954100513266 /* AppFeature in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,7 +38,7 @@
 		01F9A8122B6946E900106BF7 = {
 			isa = PBXGroup;
 			children = (
-				01F9A83F2B69901A00106BF7 /* tca-inject */,
+				01CD86502B69948400513266 /* tca-inject */,
 				01F9A81D2B6946E900106BF7 /* TCA+Inject */,
 				01F9A81C2B6946E900106BF7 /* Products */,
 				01F9A82E2B694BFD00106BF7 /* Frameworks */,
@@ -95,6 +97,7 @@
 			);
 			name = "TCA+Inject";
 			packageProductDependencies = (
+				01CD86512B69954100513266 /* AppFeature */,
 			);
 			productName = "TCA+Inject";
 			productReference = 01F9A81B2B6946E900106BF7 /* TCA+Inject.app */;
@@ -371,6 +374,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		01CD86512B69954100513266 /* AppFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppFeature;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 01F9A8132B6946E900106BF7 /* Project object */;
 }

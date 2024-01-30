@@ -5,19 +5,42 @@ import PackageDescription
 
 let package = Package(
     name: "tca-inject",
-    products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
-        .library(
-            name: "tca-inject",
-            targets: ["tca-inject"]),
-    ],
+    platforms: [
+         .iOS(.v17)
+       ],
+       products: [
+         .library(name: "AppFeature", targets: ["AppFeature"]),
+         .library(name: "MainFeature", targets: ["MainFeature"]),
+         .library(name: "SecondFeature", targets: ["SecondFeature"])
+       ],
+       dependencies: [
+         .package(url: "https://github.com/pointfreeco/swift-composable-architecture", from: "1.7.0"),
+         .package(url: "https://github.com/krzysztofzablocki/Inject.git", from: "1.3.0")
+         ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
-        .target(
-            name: "tca-inject"),
-        .testTarget(
-            name: "tca-injectTests",
-            dependencies: ["tca-inject"]),
-    ]
+            .target(
+                name: "AppFeature",
+                dependencies: [
+                  "MainFeature",
+                  "SecondFeature",
+                  "Inject",
+                  .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
+                ]
+            ),
+            .target(
+                name: "MainFeature",
+                dependencies: [
+                  "Inject",
+                  .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
+                ]
+            ),
+            .target(
+                name: "SecondFeature",
+                dependencies: [
+                  "Inject",
+                  .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
+                ]
+            )
+        ],
+        swiftLanguageVersions: [.v5]
 )
