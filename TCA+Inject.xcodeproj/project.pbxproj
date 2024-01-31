@@ -14,13 +14,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		01CD86502B69948400513266 /* tca-inject */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "tca-inject"; sourceTree = "<group>"; };
+		01D1F3AA2B6A2F53002A3285 /* tca-inject */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "tca-inject"; sourceTree = "<group>"; };
 		01F9A81B2B6946E900106BF7 /* TCA+Inject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TCA+Inject.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01F9A81E2B6946E900106BF7 /* TCA_InjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCA_InjectApp.swift; sourceTree = "<group>"; };
 		01F9A8222B6946EA00106BF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01F9A8242B6946EA00106BF7 /* TCA_Inject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TCA_Inject.entitlements; sourceTree = "<group>"; };
 		01F9A8262B6946EA00106BF7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		01F9A83E2B698FD700106BF7 /* Sources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sources; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,10 +37,9 @@
 		01F9A8122B6946E900106BF7 = {
 			isa = PBXGroup;
 			children = (
-				01CD86502B69948400513266 /* tca-inject */,
+				01D1F3AA2B6A2F53002A3285 /* tca-inject */,
 				01F9A81D2B6946E900106BF7 /* TCA+Inject */,
 				01F9A81C2B6946E900106BF7 /* Products */,
-				01F9A82E2B694BFD00106BF7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,14 +68,6 @@
 				01F9A8262B6946EA00106BF7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		01F9A82E2B694BFD00106BF7 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				01F9A83E2B698FD700106BF7 /* Sources */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
