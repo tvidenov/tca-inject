@@ -14,7 +14,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		01D1F3AA2B6A2F53002A3285 /* tca-inject */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "tca-inject"; sourceTree = "<group>"; };
+		01C027CC2B6A3A76009AF87E /* tca-inject */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "tca-inject"; path = ..; sourceTree = "<group>"; };
 		01F9A81B2B6946E900106BF7 /* TCA+Inject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TCA+Inject.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01F9A81E2B6946E900106BF7 /* TCA_InjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCA_InjectApp.swift; sourceTree = "<group>"; };
 		01F9A8222B6946EA00106BF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -37,7 +37,7 @@
 		01F9A8122B6946E900106BF7 = {
 			isa = PBXGroup;
 			children = (
-				01D1F3AA2B6A2F53002A3285 /* tca-inject */,
+				01C027CC2B6A3A76009AF87E /* tca-inject */,
 				01F9A81D2B6946E900106BF7 /* TCA+Inject */,
 				01F9A81C2B6946E900106BF7 /* Products */,
 			);
